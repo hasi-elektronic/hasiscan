@@ -7,7 +7,8 @@ Belgeleri kamera veya galeriden tara, kırp, netleştir, PDF kaydet, metin tanı
 ## Adresler
 
 - Kaynak: [github.com/hasi-elektronic/hasiscan](https://github.com/hasi-elektronic/hasiscan)
-- Canlı (Cloudflare Pages): [hasiscan.pages.dev](https://hasiscan.pages.dev)
+- Canlı: [hasiscan.vercel.app](https://hasiscan.vercel.app)
+- Cloudflare Pages: `hasiscan.pages.dev` — GitHub Actions `CLOUDFLARE_API_TOKEN` ve `CLOUDFLARE_ACCOUNT_ID` sırları eklenince yayınlanır
 
 ## Kullanım
 
@@ -17,10 +18,14 @@ Belgeleri kamera veya galeriden tara, kırp, netleştir, PDF kaydet, metin tanı
 
 ## Yayın
 
-`main` dalına her push Cloudflare Pages projesine (`hasiscan`) gider. GitHub Actions sırları:
+`main` dalına her push hem Vercel üretimine hem Cloudflare Pages işine gider.
 
-- `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
+Cloudflare için GitHub → Settings → Secrets and variables → Actions:
+
+- `CLOUDFLARE_API_TOKEN` (diğer Hasi sitelerindeki aynı token)
+- `CLOUDFLARE_ACCOUNT_ID` (`ac6ab4ce1149a3591d014841856490af`)
+
+Sonra Actions’tan **Deploy Cloudflare Pages** işini yeniden çalıştır.
 
 ## Geliştirme
 
